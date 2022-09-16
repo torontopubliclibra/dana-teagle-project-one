@@ -6,7 +6,7 @@ Under the Sea is a PSD conversion project completed by by Dana Teagle in Septemb
 
 ## Design and Process
 
-The assignmed design was the website for an aquarium called Under the Sea, and it features three pages (Home, Blog, Contact), with room for more. The design uses many overlapping images and box-shadow effects in a blue, green, white, and black colour scheme.
+The assigned design was the website for an aquarium called Under the Sea, featuring three pages (Home, Blog, Contact), with room for more. The design uses many overlapping images of fish and sea life and box-shadow effects in a blue, green, white, and black colour scheme.
 
 Only the desktop design was supplied, but for this project I chose to start with a mobile-first responsive layout, featuring breakpoints when enlarged from mobile to tablet, and then again to desktop.
 
