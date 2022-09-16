@@ -1,0 +1,322 @@
+@use 'variables' as *;
+
+// about styles
+    // mobile and larger
+    .about {
+        margin: 5%;
+        padding-bottom: 20px;
+    }
+
+    // desktop
+    @media only screen and (min-width: 1025px) {
+        .about {
+            margin: 100px 0px 100px 0px;
+            padding: 0;
+        }
+    }
+
+// articles styles
+    // mobile and larger
+    .articles {
+        overflow: hidden;
+        background-color: $color2;
+
+        // article image styles
+        .article1-img img,
+        .article2-img img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-top: 15px solid $color1;
+            border-bottom: 15px solid $color1;
+        }
+
+        // article text styles
+        .article1-text,
+        .article2-text {
+            margin: 5%;
+            padding-bottom: 30px;
+        }
+    }
+
+    // tablet and larger
+    @media only screen and (min-width: 768px) {
+        .articles {
+            border: none;
+
+            .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            }
+
+            .article1-text,
+            .article2-text,
+            .article1-img,
+            .article2-img {
+                width: 45%;
+                margin: 2.5%;
+            }
+
+            // article image styles
+            .article1-img img,
+            .article2-img img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border: 15px solid $color1;
+            }
+
+            // article 1 image
+            .article1-img {
+                order: 1;
+            }
+
+            // article 2 image
+            .article2-img {
+                order: 4;
+            }
+
+            // article 1 text
+            .article1-text {
+                order: 2;
+                text-align: left;
+            }
+
+            // article 2 text
+            .article2-text {
+                order: 3;
+                text-align: right;
+            }
+        }
+    }
+
+    // desktop
+    @media only screen and (min-width: 1025px) {
+
+        // articles styles
+        .articles {
+            overflow: visible;
+            border: none;
+            padding-bottom: 2.5%;
+            .wrapper {
+                .article1-text,
+                .article2-text,
+                .article1-img,
+                .article2-img {
+                    margin: 0%;
+                }
+        
+                .article1-img img,
+                .article2-img img {
+                    border: none;
+                    max-height: 350px;
+                }
+
+                // article 1 image
+                .article1-img img {
+                        box-shadow: 30px 30px $color1;
+                        transform: translate(0px, -30px)
+                }
+        
+                // article 2 image
+                .article2-img img {
+                        box-shadow: -30px 30px $color1;
+                        transform: translate(0px, 75px)
+                }
+            }
+        }
+    }
+
+
+// shortcuts styles
+    // mobile and larger
+    .shortcuts-container {
+        display: flex;
+        flex-direction: column;
+
+        // shortcut styles
+        .shortcut {
+            padding: 0px 25px;
+            h4 a, p {
+                padding: 10px;
+            }
+            border-bottom: 10px solid $color1;
+        }
+
+        // shortcut icon styles
+        .shortcut-icon {
+            width: 100%;
+            padding-top: 25px;
+            i {
+                font-size: 30px;
+                line-height: 1.75;
+                height: 50px;
+                width: 50px;
+                color: $color3;
+                text-align: center;
+                background-color: $color1;
+                border-radius: 50%;
+
+                // arrow icon
+                &.arrow {
+                    line-height: 1.6;
+                }
+
+                // blog and community icons
+                &.blog, &.community {
+                    font-size: 25px;
+                    line-height: 2;
+                }
+
+                // phone icon
+                &.phone {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    // tablet and larger
+    @media only screen and (min-width: 768px) {
+        .shortcuts-container {
+            padding: 5%;
+            text-align: left;
+            flex-flow: row wrap;
+
+            // shortcut styles
+            .shortcut {
+                width: 80%;
+                padding: 0;
+                border-bottom: none;
+            }
+
+            // shortcut icon styles
+            .shortcut-icon {
+                width: 20%;
+                padding: 35px;
+            }
+        }
+    }
+
+    // desktop
+    @media only screen and (min-width: 1025px) {
+        .shortcuts-container {
+            padding: 5% 0%;
+
+            // shortcut styles
+            .shortcut {
+                width: 40%;
+            }
+
+            // shortcut icon styles
+            .shortcut-icon {
+                width: 10%;
+            }
+        }
+    }
+
+// banner styles
+.banner {
+    overflow: hidden;
+    .banner-container {
+
+        // banner image styles
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+}
+
+// profile styles
+    // mobile and larger
+    .profile {
+
+        .profile-container {
+        
+                display: flex;
+                flex-direction: column-reverse;
+        
+                // profile image styles
+                .profile-img img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    border-top: 15px solid $color1;
+                    border-bottom: 15px solid $color1;
+                }
+        
+                // profile text styles
+                .profile-content {
+                    margin: 0% 5% 0% 5%;
+                    padding-bottom: 50px;
+                }
+            }
+    }
+
+    // tablet and larger
+    @media only screen and (min-width: 768px) {
+        .profile {
+            margin: 5%;
+
+            .profile-container {
+                    flex-direction: row;
+                    justify-content: space-between;
+            
+                    // profile image styles
+                    .profile-img {
+                        width: 30%;
+                        padding-bottom: 30px;
+            
+                        img {
+                            box-shadow: 30px 30px $color1;
+                            border: none;
+                        }
+                    }
+            
+                    // profile text styles
+                    .profile-content {
+                        margin: 0;
+                        width: 60%;
+                    }
+            
+                    .profile-content,
+                    .profile-content h3 {
+                        text-align: left;
+                    }
+                }
+        }
+    }
+
+// gallery styles
+    // mobile and larger
+    .gallery {
+        display: none;
+    }
+
+    // tablet and larger
+    @media only screen and (min-width: 768px) {
+        .gallery {
+            display: block;
+            background-color: $color2;
+
+            // gallery flex container
+            .gallery-container {
+                display: flex;
+                justify-content: center;
+
+                // gallery image styles
+                .gallery-img {
+                    padding: 5% 2.5%;
+                    width: 30%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }

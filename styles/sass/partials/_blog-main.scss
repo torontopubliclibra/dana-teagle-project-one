@@ -1,0 +1,249 @@
+@use 'variables' as *;
+
+
+// mobile and larger
+    .blog-main {
+        display: flex;
+        flex-direction: column-reverse;
+
+        // about section styles
+        .blog-about {
+            display: flex;
+            flex-direction: column;
+
+            // about section image
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 200px;
+            }
+
+            // about section box
+            .blog-about-box {
+                background: $color2;
+                padding: 20px;
+                margin-bottom: 20px;
+
+                // recent posts list
+                ul {
+                    padding: 0;
+                    li {
+                        list-style: initial;
+                        padding: 10px;
+                        a {
+                        padding: 10px;
+                        color: $white;
+                        text-decoration: none;
+                        &:hover, &:focus {
+                            background-color: $color3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // blog post styles
+        .blog-post {
+            z-index: 6;
+
+            // blog image
+            .blog-img {
+                    width: 100%;
+                    max-height: 400px;
+                    object-fit: cover;
+                    border: 15px solid $color1;
+                }
+            }
+
+            .blog-content {
+                margin: 5%;
+            }
+
+            // blog comments
+            .blog-comments {
+                border-top: 15px solid $color1;
+
+                // comment
+                .comment {
+                    display: flex;
+                    flex-direction: row;
+                    border-top: 5px solid $color1;
+                    .comment-text {
+                        width: 100%;
+                        padding: 20px;
+                    }
+                    .comment-img {
+                        display: none;
+                    }
+                }
+
+                // comment form
+                .comment-form {
+                    border-top: 5px solid $color1;
+                    background: $color3;
+                    margin-bottom: 30px;
+                    fieldset {
+                        padding: 25px;
+                        input {
+                        color: $white;
+                        background-color: $color3;
+            
+                        // text and textare
+                        &[type=text]:focus,
+                        &[type=textarea]:focus {
+                            border: 2px solid $color2;
+                        }
+
+                        // submit
+                        &[type=submit] {
+                            background-color: $color2;
+                            transition: 0.3s;
+                            &:focus,
+                            &:hover {
+                                background-color: $color1;
+                                color: $color3;
+                                box-shadow: 5px 5px $color2;
+                            }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+// tablets and larger
+@media only screen and (min-width: 768px) {
+    .blog-main {
+        display: flex;
+
+        // about section
+        .blog-about {
+            text-align: left;
+
+            // about section box
+            .blog-about-box {
+                background: $color2;
+                padding: 0% 5%;
+                margin: 0% 5%;
+            }
+        }
+
+        // blog post styles
+        .blog-post {
+            width: 90%;
+            margin: 5%;
+
+            // blog comments
+            .blog-comments {
+                text-align: left;
+
+                // h3 styles
+                h3 {
+                    text-align: left;
+                }
+
+                // comment
+                .comment,
+                .comment-form {
+                    border: none;
+                }
+
+                // comment box
+                .comment {
+                    display: flex;
+                    justify-content: space-between;
+
+                    // comment image
+                    .comment-img {
+                        display: block;
+                        width: 20%;
+                        margin: 40px 0px 5px 0px;
+                    }
+
+                    // comment text
+                    .comment-text {
+                        margin: 0px 5px 5px 5px;
+                        width: 80%;
+                    }
+                }
+
+                // comment form
+                .comment-form {
+                    fieldset {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// desktop
+@media only screen and (min-width: 1025px) {
+    .blog-main {
+        flex-direction: row;
+        justify-content: space-between;
+
+        // about section
+        .blog-about {
+            width: 30%;
+            transform: translate(0px, -30px);
+
+            //  about section image
+                img {
+                    width: 95%;
+                    z-index: 5;
+                }
+
+            // about section box
+            .blog-about-box {
+                position: absolute;
+                width: 80%;
+                top: 11px;
+                right: 0;
+                padding: 175px 20px 20px 20px;
+
+                // recent posts list
+                ul {
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        // blog post styles
+        .blog-post {
+            padding-bottom: 100px;
+            width: 60%;
+            margin: 0px 0px -200px 0px;
+            transform: translate(0px, -100px);
+
+            // blog image
+            .blog-img {
+                border: none;
+                box-shadow: -30px 30px $color1;
+                transform: none;
+            }
+
+            // blog content
+            .blog-content {
+                padding-top: 15px;
+                border-left: 5px solid $color1;
+                border-bottom: 5px solid $color1;
+                transform: translate(-50px, -30px);
+                text-align: left;
+                margin-bottom: 20px;
+                h3 {
+                    text-align: left;
+                }
+            }
+
+            // blog comments
+            .blog-comments {
+                border: none;
+                margin-right: 100px;
+            }
+        }
+    }
+}

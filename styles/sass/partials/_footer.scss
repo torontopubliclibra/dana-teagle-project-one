@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+// mobile and larger
+    footer {
+        background-color: $color3;
+        padding-bottom: 10px;
+    }
+
+// desktop
+@media only screen and (min-width: 1025px) {
+    footer {
+        background-color: $color1;
+        padding-top: 10px;
+        padding-bottom: none;
+    }
+}

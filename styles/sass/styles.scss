@@ -1,0 +1,131 @@
+@use 'partials/setup';
+@use 'partials/typography' as *;
+@use 'partials/variables' as *;
+@use 'partials/header';
+@use 'partials/nav';
+@use 'partials/index-main';
+@use 'partials/contact-main';
+@use 'partials/blog-main';
+@use 'partials/footer';
+
+// mobile and larger
+
+    // body styles
+    body {
+        max-width: 100vw;
+        background-color: $color3;
+    }
+
+    // list styles
+    ul li {
+        list-style: none;
+    }
+
+    // wrapper styles
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    // button styles
+    .button {
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: 0.3s;
+        &:hover, &:focus {
+            cursor: pointer;
+        }
+            
+        // button 1 styles
+        &.btn1 {
+            background: $color1;
+            color: $color3;
+            &:hover, &:focus {
+                background: $color2;
+                color: $color1;
+                box-shadow: 5px 5px $color1;
+            }
+            &:active, &:focus {
+                background: #{rgba($color2, 0.5)};
+                transform: scale(0.9);
+            }
+        }
+
+        // button 2 styles
+        &.btn2 {
+            background: $color3;
+            color: $white;
+            &:hover, &:focus {
+                background: $color1;
+                color: $color3;
+                box-shadow: 5px 5px $color3;
+            }
+        &:active, &:focus {
+            background: #{rgba($color1, 0.5)};
+            transform: scale(0.9);
+        }
+        }
+    }
+
+    // form styles
+    fieldset {
+        border: none;
+
+        input {
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            &[type=text] {
+                border-bottom: 2px solid $color1;
+            }
+            &[type=textarea] {
+                padding-bottom: 200px;
+                border: 2px solid $color1;
+            }
+            &[type=text]:focus,
+            &[type=textarea]:focus {
+                outline: none;
+            }
+            &[type=submit] {
+                &:focus,
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+// desktop
+    @media only screen and (min-width: 1025px) {
+
+        // wrapper styles
+            .wrapper {
+                max-width: 1260px;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+        // form styles
+        fieldset {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            input {
+                &:first-child {
+                    margin-right: 2%;
+                }
+                &[type=text] {
+                    width: 48%;
+                }
+                &[type=textarea] {
+                    padding-bottom: 100px;
+                }
+                &[type=textarea],
+                &[type=submit] {
+                    width: 100%;
+                }
+            }
+        }
+    }

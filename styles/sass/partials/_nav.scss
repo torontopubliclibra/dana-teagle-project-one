@@ -1,0 +1,89 @@
+@use 'variables' as *;
+
+// slide-in animation
+@keyframes slide-in {
+    0% {
+        opacity: 0%;
+        width: 0vw;
+    }
+    100% {
+        opacity: 100%;
+        width: 100vw;
+    }
+}
+
+// navigation styles
+nav {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 4;
+
+    // hamburger button and nav styles
+    .hamburger-btn a,
+    #main-nav a, #main-nav span.current {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        &:hover, &:focus {
+            transition: 0.3s
+        }
+    }
+
+    // main navigation styles
+    #main-nav {
+        position: absolute;
+        width: 100vw;
+        right: 0;
+        display: none;
+        background-color: rgba($color: $color3, $alpha: 0.75);
+
+        // list styles
+        li {
+            margin: 40px 0px 40px 0px;
+            &:first-of-type {
+                margin-top: 20px;
+            }
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// tablet and larger
+@media only screen and (min-width: 768px) {
+    // navigation styles
+    nav {
+        top: 0;
+        right: 5%;
+
+        // hamburger button styles
+        .hamburger-btn {
+            display: none;
+        }
+
+        // main navigation styles
+        #main-nav {
+            width: 100vw;
+            margin-top: 50px;
+            display: block;
+            position: static;
+            background-color: transparent;
+            
+            // list styles
+            li {
+                display: inline;
+                margin: 0;
+            }
+        }   
+    }
+}
+
+// desktop
+@media only screen and (min-width: 1025px) {
+    // navigation styles
+    nav {
+        right: 0;
+    }
+}

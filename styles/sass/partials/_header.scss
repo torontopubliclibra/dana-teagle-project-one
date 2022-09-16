@@ -1,0 +1,109 @@
+@use 'variables' as *;
+
+
+.index-header {
+    height: 600px;
+}
+
+.contact-header, .blog-header {
+    height: 400px;
+}
+
+.index-header .wrapper,
+.contact-header .wrapper,
+.blog-header .wrapper {
+    position: relative;
+}
+
+// header styles
+    // mobile and larger
+    header {
+        left: 5%;
+        overflow: hidden;
+        display: flex;
+
+        .wrapper, .header-overlap {
+            z-index: 6;
+        }
+
+        // h1 styles
+        h1 {
+            z-index: 3;
+            padding: 20px;
+            
+            // h1 line break
+            .title-break:before {
+                content: "\a";
+                white-space: pre;
+            }
+        }
+
+        // header background image styles
+        .header-bg, .contact-bg, .blog-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            img {
+                max-width: 100%;
+                width: 100vw;
+                object-fit: cover;
+            }
+        }
+        .header-bg {
+            opacity: 40%;
+        }
+        .header-bg {
+            img {
+                height: 600px;
+            }
+        }
+        .contact-bg,
+        .blog-bg {
+            img {
+                height: 400px;
+            }
+        }
+
+        // overlapping header image styles
+        .header-overlap {
+            display: none;
+        }
+    }
+
+@media only screen and (min-width: 1025px) {
+
+    // desktop
+    header {
+        overflow: visible;
+        &.contact-header h1,
+        &.blog-header h1 {
+            text-align: right;
+            transform: translate(-50px, 100px);
+
+            // h1 line break
+            .title-break:before {
+                content: none;
+                white-space: unset;
+            }
+        }
+
+        &.contact-header h1 {
+            transform: translate(-50px, 100px);
+        }
+
+        &.blog-header h1 {
+            transform: translate(-350px, 100px);
+        }
+
+        // overlapping header image styles
+        .header-overlap {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 125px;
+            img {
+                width: 600px
+            }
+        }
+    }
+}

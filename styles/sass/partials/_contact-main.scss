@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+// mobile and larger
+    .contact-main {
+
+        // contact wrapper styles
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        // contact information styles
+        .contact-info {
+            padding-top: 20px;
+            .social-links, .address {
+                list-style: none;
+                padding: 0;
+            }
+
+            // social link styles
+            .social-links {
+                a {
+                    padding: 15px;
+                }
+                li {
+                    display: inline;
+                }
+            }
+
+            // h4 styles
+            h4 a {
+                padding: 15px;
+            }
+
+            // address styles
+            .address {
+                padding: 15px;
+            }
+        }
+
+        // contact form styles
+        .contact-form {
+            z-index: 6;
+            background: $color2;
+            border-top: 15px solid $color1;
+            margin-bottom: 30px;
+
+            // form input styles
+            fieldset input {
+                color: $white;
+                background-color: $color2;
+
+                // text and textarea
+                &[type=text]:focus, &[type=textarea]:focus {
+                    border: 2px solid $color3;
+                }
+
+                // submit
+                &[type=submit] {
+                    background-color: $color3;
+                    transition: 0.3s;
+                    &:focus, &:hover {
+                        background-color: $color1;
+                        color: $color3;
+                        box-shadow: 5px 5px $color3;
+                    }
+                }
+            }
+        }
+    }
+
+// tablets and larger
+@media only screen and (min-width: 768px) {
+    // contact container styles
+    .contact-main {
+        .contact-container {
+            justify-content: space-between;
+            flex-direction: row;
+            padding-bottom: 20px;
+
+            // contact information styles
+            .contact-info {
+                width: 40%;
+            }
+
+            // contact form styles
+            .contact-form {
+                box-shadow: -30px 30px $color1;
+                border: none;
+                padding: 35px;
+                width: 55%;
+            }
+        }
+    }
+}
+
+// desktop
+@media only screen and (min-width: 1025px) {
+    .contact-main {
+
+        // contact container styles
+        .contact-container {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        // contact information styles
+        .contact-info {
+            margin: 5%;
+            text-align: left;
+        }
+
+        // contact form styles
+        .contact-form {
+            transform: translate(0px, -100px);
+            height: 100%;
+            margin: 0;
+        }
+    }
+}

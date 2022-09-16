@@ -1,0 +1,149 @@
+@use 'variables' as *;
+
+// font variables
+$font1: 'Barlow', sans-serif;
+$font2: 'Lato', sans-serif;
+
+// mobile and larger
+
+    // typographical styles
+    body {
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    h1, h2, h3, h4, nav, .button {
+        font-family: $font1;
+        text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4, nav, body {
+        color: $white;
+    }
+
+    p {
+        font-family: $font2;
+    }
+
+    h1 {
+        font-size: 90px;
+        line-height: 110px;
+        text-align: left;
+    }
+
+    h2, .contact-header h1, .blog-header h1 {
+        font-size: 80px;
+        line-height: 92px;
+    }
+
+    h3 {
+        font-size: 42px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    h4 {
+        font-size: 32px;
+        letter-spacing: 1px;
+        a {
+            color: $white;
+            text-decoration: none;
+            &:hover, &:focus {
+                color: $color3;
+                background-color: $white;
+            }
+        }
+        &.blog-about-title {
+            font-size: 20px;
+        }
+    }
+
+    nav {
+        font-size: 20px;
+        text-align: right;
+        line-height: 29px;
+        letter-spacing: 1px;
+        .hamburger-btn a {
+            font-size: 35px;
+            &:hover, &:focus {
+                background-color: rgba($color: $color3, $alpha: 0.75);
+            }
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+        #main-nav a {
+            &:hover, &:focus {
+                color: $color3;
+                background-color: $white;
+            }
+        }
+        .current {
+            color: $color1;
+            &:hover, &:focus {
+                color: $color3;
+                background-color: $color1 !important;
+                cursor: pointer;
+            }
+        }
+    }
+
+    ul li {
+        font-family: $font2;
+        font-size: 20px;
+        line-height: 29px;
+    }
+
+    .social-links {
+        a {
+            color: $white;
+            &:hover {
+                color: $color3;
+                background-color: $white;
+            }
+            i {
+                font-size: 30px;
+                line-height: 29px;
+            }
+        }
+    }
+
+    .button {
+        font-size: 20px;
+        text-align: center;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+
+    .blog-about ul li {
+        font-family: $font2;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    footer {
+        margin: 0;
+        color: $white;
+    }
+
+// tablets and larger
+@media only screen and (min-width: 768px) {
+    
+        // typographical styles
+            h1 {
+                font-size: 138px;
+                line-height: 126px;
+            }
+    }
+
+// desktop
+    @media only screen and (min-width: 1025px) {
+
+        // typographical styles
+        footer p {
+            color: $color3;
+        }
+    }
