@@ -12,3 +12,20 @@ function hamburger() {
     nav.style.display = "none";
   }
 }
+
+// shortcuts accordion effect
+function accordion(item) {
+
+  // set accordion text variable
+  const accordionText = document.getElementById(`accordion${item}`)
+
+  console.log(accordionText);
+
+  // make accordionText appear
+  if (accordionText.style.display === "none") {
+    accordionText.style.display = "block";
+  } else {
+    accordionText.style.display = "none";
+  }
+
+}

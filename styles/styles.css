@@ -652,6 +652,9 @@ nav #main-nav li:last-of-type {
 .shortcuts-container .shortcut-icon i.phone {
   transform: scaleX(-1);
 }
+.shortcuts-container .accordion {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   .shortcuts-container {
