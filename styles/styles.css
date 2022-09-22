@@ -289,10 +289,10 @@ nav {
   line-height: 29px;
   letter-spacing: 1px;
 }
-nav .hamburger-btn a {
+nav .hamburger-btn i {
   font-size: 35px;
 }
-nav .hamburger-btn a:hover, nav .hamburger-btn a:focus {
+nav .hamburger-btn i:hover, nav .hamburger-btn i:focus {
   background-color: rgba(12, 20, 35, 0.75);
 }
 nav a {
@@ -464,20 +464,23 @@ header .header-overlap {
 }
 nav {
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 0;
   z-index: 4;
 }
-nav .hamburger-btn a,
+nav .hamburger-btn i,
 nav #main-nav a, nav #main-nav span.current {
   width: 100%;
   padding: 20px;
-  margin: 0;
+  margin: 0px;
 }
-nav .hamburger-btn a:hover, nav .hamburger-btn a:focus,
+nav .hamburger-btn i:hover, nav .hamburger-btn i:focus,
 nav #main-nav a:hover,
 nav #main-nav a:focus, nav #main-nav span.current:hover, nav #main-nav span.current:focus {
   transition: 0.3s;
+}
+nav .hamburger-btn i {
+  cursor: pointer;
 }
 nav #main-nav {
   position: absolute;

@@ -15,19 +15,23 @@
 // navigation styles
 nav {
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 0;
     z-index: 4;
 
     // hamburger button and nav styles
-    .hamburger-btn a,
+    .hamburger-btn i,
     #main-nav a, #main-nav span.current {
         width: 100%;
         padding: 20px;
-        margin: 0;
+        margin: 0px;
         &:hover, &:focus {
             transition: 0.3s
         }
+    }
+
+    .hamburger-btn i {
+        cursor: pointer;
     }
 
     // main navigation styles
