@@ -1,35 +1,35 @@
 // mobile slide-out nav function
 
-  // set hamburger-btn variable
-  const hamburger = document.getElementById("hamburger-btn");
+  // set hamburger button variable
+  const hamburgerBtn = document.getElementById(`hamburger-btn`);
 
-  // hamburger-btn callback function
-  hamburger.addEventListener('click', function(){
-    
-    // set main-nav variable
-    const nav = document.getElementById("main-nav");
+  // set main nav variable
+  const nav = document.getElementById(`main-nav`);
 
-    // make nav appear
-    if (nav.style.display === "none") {
-      nav.style.display = "block";
-      nav.style.animation = "slide-in linear 0.3s";
+  // hamburger menu function (hide/show)
+  function hamburger() {
+    if (!nav.style.display) {
+      nav.style.animation = `slide-in linear 0.3s`;
+      nav.style.display = `block`;
     } else {
-      nav.style.display = "none";
-    }
+      nav.style.display = ``;
+    };
+  };
 
-  })
+  // hamburger button callback function
+  hamburgerBtn.addEventListener(`click`, hamburger);
 
-// shortcuts accordion function
-function accordion(item) {
+// // shortcuts accordion function
+// function accordion(item) {
 
-  // set accordion text variable
-  const accordionText = document.getElementById(`accordion${item}`)
+//   // set accordion text variable
+//   const accordionText = document.getElementById(`accordion${item}`)
 
-  // make accordionText appear
-  if (accordionText.style.display === "none") {
-    accordionText.style.display = "block";
-  } else {
-    accordionText.style.display = "none";
-  }
+//   // make accordionText appear
+//   if (accordionText.style.display === "none") {
+//     accordionText.style.display = "block";
+//   } else {
+//     accordionText.style.display = "none";
+//   }
 
-}
+// }
