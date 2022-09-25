@@ -1097,9 +1097,26 @@ ul li {
   transform: scale(0.9);
 }
 
+@-webkit-keyframes btn-fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes btn-fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 #scroll-to-top {
   display: inline-block;
-  color: #86E0F9;
+  color: #FFFFFF;
   font-size: 75px;
   height: 75px;
   width: 75px;
@@ -1113,9 +1130,11 @@ ul li {
 }
 #scroll-to-top:hover, #scroll-to-top:focus {
   cursor: pointer;
-  color: #FFFFFF;
+  color: #86E0F9;
 }
 #scroll-to-top.show-button {
+  -webkit-animation: btn-fade-in linear 0.3s;
+          animation: btn-fade-in linear 0.3s;
   opacity: 1;
   visibility: visible;
 }

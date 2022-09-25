@@ -42,22 +42,29 @@
   // set scroll button variable
   const scrollBtn = document.getElementById(`scroll-to-top`);
 
-  // scroll function
-  function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      }
-
   // show button once scrolled down
   window.addEventListener(`scroll`, function() {
+    
+    // if window is scrolled down
     if (window.scrollY >= 600){
+
+      // add show-button class
       scrollBtn.classList.add(`show-button`);
+
+    // if window is near the top
     } else {
+
+      // remove show-button class
       scrollBtn.classList.remove(`show-button`);
     }
   });
 
-  // run scroll function on button click
-  scrollBtn.addEventListener(`click`, scrolltoTop);
+  // run scroll on button click
+  scrollBtn.addEventListener(`click`, function() {
+
+    // scroll to top function
+    window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+  });
