@@ -39,7 +39,25 @@
 
 // scroll to top button function
 
+  // set scroll button variable
+  const scrollBtn = document.getElementById(`scroll-to-top`);
+
   // scroll function
   function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
       }
+
+  // show button once scrolled down
+  window.addEventListener(`scroll`, function() {
+    if (window.scrollY >= 600){
+      scrollBtn.classList.add(`show-button`);
+    } else {
+      scrollBtn.classList.remove(`show-button`);
+    }
+  });
+
+  // run scroll function on button click
+  scrollBtn.addEventListener(`click`, scrolltoTop);
