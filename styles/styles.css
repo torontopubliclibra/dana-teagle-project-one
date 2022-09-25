@@ -462,6 +462,26 @@ header .header-overlap {
     width: 100vw;
   }
 }
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 100%;
+    width: 100vw;
+  }
+  100% {
+    opacity: 0%;
+    width: 0vw;
+  }
+}
+@keyframes slide-out {
+  0% {
+    opacity: 100%;
+    width: 100vw;
+  }
+  100% {
+    opacity: 0%;
+    width: 0vw;
+  }
+}
 nav {
   position: absolute;
   top: 0;
@@ -655,9 +675,6 @@ nav #main-nav li:last-of-type {
 }
 .shortcuts-container .shortcut-icon i.phone {
   transform: scaleX(-1);
-}
-.shortcuts-container .accordion {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {

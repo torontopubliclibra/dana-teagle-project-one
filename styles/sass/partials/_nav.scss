@@ -12,6 +12,19 @@
     }
 }
 
+// slide-out animation
+@keyframes slide-out {
+    0% {
+        opacity: 100%;
+        width: 100vw;
+    }
+
+    100% {
+        opacity: 0%;
+        width: 0vw;
+    }
+}
+
 // navigation styles
 nav {
     position: absolute;
