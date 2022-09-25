@@ -78,7 +78,7 @@
         opacity: 0;
         z-index: 10;
         position: fixed;
-        bottom: 30px;
+        top: 30px;
         right: 30px;
         transition: opacity linear 0.3s;
         &:hover, &:focus {
