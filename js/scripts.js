@@ -16,20 +16,5 @@
     };
   };
 
-  // hamburger button callback function
-  hamburgerBtn.addEventListener(`click`, hamburger);
-
-// // shortcuts accordion function
-// function accordion(item) {
-
-//   // set accordion text variable
-//   const accordionText = document.getElementById(`accordion${item}`)
-
-//   // make accordionText appear
-//   if (accordionText.style.display === "none") {
-//     accordionText.style.display = "block";
-//   } else {
-//     accordionText.style.display = "none";
-//   }
-
-// }
+  // hamburger button event listener
+    hamburgerBtn.addEventListener(`click`, hamburger);
