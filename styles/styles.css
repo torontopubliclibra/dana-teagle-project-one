@@ -1097,23 +1097,6 @@ ul li {
   transform: scale(0.9);
 }
 
-@-webkit-keyframes btn-fade-in {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes btn-fade-in {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 #scroll-to-top {
   display: inline-block;
   color: rgba(255, 255, 255, 0.75);
@@ -1121,22 +1104,16 @@ ul li {
   height: 60px;
   width: 60px;
   text-align: center;
-  visibility: hidden;
   opacity: 0;
   z-index: 10;
   position: fixed;
   bottom: 30px;
   right: 30px;
+  transition: opacity linear 0.3s;
 }
 #scroll-to-top:hover, #scroll-to-top:focus {
   cursor: pointer;
   color: #FFFFFF;
-}
-#scroll-to-top.show-button {
-  -webkit-animation: btn-fade-in linear 0.3s;
-          animation: btn-fade-in linear 0.3s;
-  opacity: 1;
-  visibility: visible;
 }
 
 fieldset {

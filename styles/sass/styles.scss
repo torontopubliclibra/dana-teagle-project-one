@@ -67,17 +67,6 @@
         }
     }
 
-    // button fade-in animation
-    @keyframes btn-fade-in {
-        0% {
-            opacity: 0%;
-        }
-
-        100% {
-            opacity: 100%;
-        }
-    }
-
     // scroll to top button
     #scroll-to-top {
         display: inline-block;
@@ -86,20 +75,15 @@
         height: 60px;
         width: 60px;
         text-align: center;
-        visibility: hidden;
         opacity: 0;
         z-index: 10;
         position: fixed;
         bottom: 30px;
         right: 30px;
+        transition: opacity linear 0.3s;
         &:hover, &:focus {
             cursor: pointer;
             color: $white;
-        }
-        &.show-button {
-            animation: btn-fade-in linear 0.3s;
-            opacity: 1;
-            visibility: visible;
         }
     }
 

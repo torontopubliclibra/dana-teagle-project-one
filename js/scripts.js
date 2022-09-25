@@ -48,14 +48,16 @@
     // if window is scrolled down
     if (window.scrollY >= 600){
 
-      // add show-button class
-      scrollBtn.classList.add(`show-button`);
+      // make button visible
+      scrollBtn.style.opacity = `1`;
+      scrollBtn.style.visibility = `visible`;
 
     // if window is near the top
     } else {
 
-      // remove show-button class
-      scrollBtn.classList.remove(`show-button`);
+        // make button hidden
+        scrollBtn.style.opacity = `0`;
+        scrollBtn.style.visibility = `hidden`;
     }
   });
 
