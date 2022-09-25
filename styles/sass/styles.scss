@@ -29,6 +29,7 @@
 
     // button styles
     .button {
+        border: none;
         text-decoration: none;
         padding: 10px 20px;
         transition: 0.3s;
@@ -40,12 +41,12 @@
         &.btn1 {
             background: $color1;
             color: $color3;
-            &:hover, &:focus {
+            &:hover {
                 background: $color2;
                 color: $color1;
                 box-shadow: 5px 5px $color1;
             }
-            &:active, &:focus {
+            &:active {
                 background: #{rgba($color2, 0.5)};
                 transform: scale(0.9);
             }
@@ -55,15 +56,15 @@
         &.btn2 {
             background: $color3;
             color: $white;
-            &:hover, &:focus {
+            &:hover {
                 background: $color1;
                 color: $color3;
                 box-shadow: 5px 5px $color3;
             }
-        &:active, &:focus {
-            background: #{rgba($color1, 0.5)};
-            transform: scale(0.9);
-        }
+            &:active {
+                background: #{rgba($color1, 0.5)};
+                transform: scale(0.9);
+            }
         }
     }
 

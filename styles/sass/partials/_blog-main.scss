@@ -60,6 +60,16 @@
                 margin: 5%;
             }
 
+            #blog-comments {
+                display: none;
+            }
+
+            #show-comments {
+                margin-bottom: 30px;
+                width: 85%;
+                float: left;
+            }
+
             // blog comments
             .blog-comments {
                 border-top: 15px solid $color1;

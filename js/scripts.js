@@ -70,3 +70,35 @@
           behavior: `smooth`,
         });
   });
+
+
+// comments button function
+
+  // set comments button variable
+  const commentBtn = document.getElementById(`show-comments`);
+
+  // set comments section variable
+  const comments = document.getElementById(`blog-comments`);
+
+  // hide/reveal comments on button click
+  commentBtn.addEventListener(`click`, function() {
+
+    // if display = false
+    if (!comments.style.display){
+
+      // make display = block
+      comments.style.display = `block`;
+
+      // change button to say `hide comments`
+      commentBtn.innerText = `Hide Comments`;
+
+    // if display = block
+    } else {
+
+      // make display = none
+      comments.style.display = ``;
+
+      // change button to say `show comments`
+      commentBtn.innerText = `Show Comments`;
+    }
+  })

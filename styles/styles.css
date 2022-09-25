@@ -903,6 +903,14 @@ nav #main-nav li:last-of-type {
 .blog-main .blog-content {
   margin: 5%;
 }
+.blog-main #blog-comments {
+  display: none;
+}
+.blog-main #show-comments {
+  margin-bottom: 30px;
+  width: 85%;
+  float: left;
+}
 .blog-main .blog-comments {
   border-top: 15px solid #86E0F9;
 }
@@ -1063,6 +1071,7 @@ ul li {
 }
 
 .button {
+  border: none;
   text-decoration: none;
   padding: 10px 20px;
   transition: 0.3s;
@@ -1074,12 +1083,12 @@ ul li {
   background: #86E0F9;
   color: #0C1423;
 }
-.button.btn1:hover, .button.btn1:focus {
+.button.btn1:hover {
   background: #0F614E;
   color: #86E0F9;
   box-shadow: 5px 5px #86E0F9;
 }
-.button.btn1:active, .button.btn1:focus {
+.button.btn1:active {
   background: rgba(15, 97, 78, 0.5);
   transform: scale(0.9);
 }
@@ -1087,12 +1096,12 @@ ul li {
   background: #0C1423;
   color: #FFFFFF;
 }
-.button.btn2:hover, .button.btn2:focus {
+.button.btn2:hover {
   background: #86E0F9;
   color: #0C1423;
   box-shadow: 5px 5px #0C1423;
 }
-.button.btn2:active, .button.btn2:focus {
+.button.btn2:active {
   background: rgba(134, 224, 249, 0.5);
   transform: scale(0.9);
 }
