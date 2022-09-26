@@ -37,6 +37,10 @@
                         &:hover, &:focus {
                             background-color: $color3;
                             }
+                        &:focus {
+                            outline: none;
+                            border: $color1 solid 2px;
+                        }
                         }
                     }
                 }
@@ -107,20 +111,24 @@
                         // submit
                         &[type=submit] {
                             background-color: $color2;
-                            transition: 0.3s;
-                            &:focus,
                             &:hover {
                                 background-color: $color1;
                                 color: $color3;
                                 box-shadow: 5px 5px $color2;
+                                transition: 0.3s;
                             }
-
+                            &:focus {
+                                background-color: $color1;
+                                color: $color3;
+                                outline: none;
+                                border: 2px solid $color2;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
 // tablets and larger
 @media only screen and (min-width: 768px) {

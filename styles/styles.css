@@ -279,6 +279,10 @@ h4 a:hover, h4 a:focus {
   color: #0C1423;
   background-color: #FFFFFF;
 }
+h4 a:focus {
+  outline: none;
+  border: #86E0F9 solid 2px;
+}
 h4.blog-about-title {
   font-size: 20px;
 }
@@ -303,10 +307,14 @@ nav #main-nav a:hover, nav #main-nav a:focus {
   color: #0C1423;
   background-color: #FFFFFF;
 }
+nav #main-nav a:focus {
+  outline: none;
+  border: #86E0F9 solid 2px;
+}
 nav .current {
   color: #86E0F9;
 }
-nav .current:hover, nav .current:focus {
+nav .current:hover {
   color: #0C1423;
   background-color: #86E0F9 !important;
   cursor: pointer;
@@ -321,9 +329,13 @@ ul li {
 .social-links a {
   color: #FFFFFF;
 }
-.social-links a:hover {
+.social-links a:hover, .social-links a:focus {
   color: #0C1423;
   background-color: #FFFFFF;
+}
+.social-links a:focus {
+  outline: none;
+  border: #86E0F9 solid 2px;
 }
 .social-links a i {
   font-size: 30px;
@@ -494,9 +506,8 @@ nav #main-nav a, nav #main-nav span.current {
   padding: 20px;
   margin: 0px;
 }
-nav .hamburger-btn i:hover, nav .hamburger-btn i:focus,
-nav #main-nav a:hover,
-nav #main-nav a:focus, nav #main-nav span.current:hover, nav #main-nav span.current:focus {
+nav .hamburger-btn i:hover,
+nav #main-nav a:hover, nav #main-nav span.current:hover {
   transition: 0.3s;
 }
 nav .hamburger-btn i {
@@ -817,12 +828,18 @@ nav #main-nav li:last-of-type {
 }
 .contact-main .contact-form fieldset input[type=submit] {
   background-color: #0C1423;
-  transition: 0.3s;
 }
-.contact-main .contact-form fieldset input[type=submit]:focus, .contact-main .contact-form fieldset input[type=submit]:hover {
+.contact-main .contact-form fieldset input[type=submit]:hover {
   background-color: #86E0F9;
   color: #0C1423;
   box-shadow: 5px 5px #0C1423;
+  transition: 0.3s;
+}
+.contact-main .contact-form fieldset input[type=submit]:focus {
+  background-color: #86E0F9;
+  color: #0C1423;
+  outline: none;
+  border: 2px solid #0C1423;
 }
 
 @media only screen and (min-width: 768px) {
@@ -890,6 +907,10 @@ nav #main-nav li:last-of-type {
 .blog-main .blog-about .blog-about-box ul li a:hover, .blog-main .blog-about .blog-about-box ul li a:focus {
   background-color: #0C1423;
 }
+.blog-main .blog-about .blog-about-box ul li a:focus {
+  outline: none;
+  border: #86E0F9 solid 2px;
+}
 .blog-main .blog-post {
   z-index: 6;
 }
@@ -942,12 +963,18 @@ nav #main-nav li:last-of-type {
 }
 .blog-main .blog-comments .comment-form fieldset input[type=submit] {
   background-color: #0F614E;
-  transition: 0.3s;
 }
-.blog-main .blog-comments .comment-form fieldset input[type=submit]:focus, .blog-main .blog-comments .comment-form fieldset input[type=submit]:hover {
+.blog-main .blog-comments .comment-form fieldset input[type=submit]:hover {
   background-color: #86E0F9;
   color: #0C1423;
   box-shadow: 5px 5px #0F614E;
+  transition: 0.3s;
+}
+.blog-main .blog-comments .comment-form fieldset input[type=submit]:focus {
+  background-color: #86E0F9;
+  color: #0C1423;
+  outline: none;
+  border: 2px solid #0F614E;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1076,9 +1103,8 @@ ul li {
   border: none;
   text-decoration: none;
   padding: 10px 20px;
-  transition: 0.3s;
 }
-.button:hover, .button:focus {
+.button:hover {
   cursor: pointer;
 }
 .button.btn1 {
@@ -1089,6 +1115,13 @@ ul li {
   background: #0F614E;
   color: #86E0F9;
   box-shadow: 5px 5px #86E0F9;
+  transition: 0.3s;
+}
+.button.btn1:focus {
+  outline: none;
+  background: #0F614E;
+  color: #86E0F9;
+  border: 2px solid #86E0F9;
 }
 .button.btn1:active {
   background: rgba(15, 97, 78, 0.5);
@@ -1102,6 +1135,13 @@ ul li {
   background: #86E0F9;
   color: #0C1423;
   box-shadow: 5px 5px #0C1423;
+  transition: 0.3s;
+}
+.button.btn2:focus {
+  outline: none;
+  background: #86E0F9;
+  color: #0C1423;
+  border: 2px solid #0C1423;
 }
 .button.btn2:active {
   background: rgba(134, 224, 249, 0.5);
@@ -1147,6 +1187,7 @@ fieldset input[type=text]:focus, fieldset input[type=textarea]:focus {
   outline: none;
 }
 fieldset input[type=submit]:focus, fieldset input[type=submit]:hover {
+  outline: none;
   cursor: pointer;
 }
 

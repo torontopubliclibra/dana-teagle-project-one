@@ -32,8 +32,7 @@
         border: none;
         text-decoration: none;
         padding: 10px 20px;
-        transition: 0.3s;
-        &:hover, &:focus {
+        &:hover {
             cursor: pointer;
         }
             
@@ -45,6 +44,13 @@
                 background: $color2;
                 color: $color1;
                 box-shadow: 5px 5px $color1;
+                transition: 0.3s;
+            }
+            &:focus {
+                outline: none;
+                background: $color2;
+                color: $color1;
+                border: 2px solid $color1;
             }
             &:active {
                 background: #{rgba($color2, 0.5)};
@@ -60,6 +66,13 @@
                 background: $color1;
                 color: $color3;
                 box-shadow: 5px 5px $color3;
+                transition: 0.3s;
+            }
+            &:focus {
+                outline: none;
+                background: $color1;
+                color: $color3;
+                border: 2px solid $color3;
             }
             &:active {
                 background: #{rgba($color1, 0.5)};
@@ -111,6 +124,7 @@
             &[type=submit] {
                 &:focus,
                 &:hover {
+                    outline: none;
                     cursor: pointer;
                 }
             }

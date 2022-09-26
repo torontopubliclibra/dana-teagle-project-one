@@ -54,6 +54,10 @@ $font2: 'Lato', sans-serif;
                 color: $color3;
                 background-color: $white;
             }
+            &:focus {
+                outline: none;
+                border: $color1 solid 2px;
+            }
         }
         &.blog-about-title {
             font-size: 20px;
@@ -80,10 +84,14 @@ $font2: 'Lato', sans-serif;
                 color: $color3;
                 background-color: $white;
             }
+            &:focus {
+                outline: none;
+                border: $color1 solid 2px;
+            }
         }
         .current {
             color: $color1;
-            &:hover, &:focus {
+            &:hover {
                 color: $color3;
                 background-color: $color1 !important;
                 cursor: pointer;
@@ -100,9 +108,13 @@ $font2: 'Lato', sans-serif;
     .social-links {
         a {
             color: $white;
-            &:hover {
+            &:hover, &:focus {
                 color: $color3;
                 background-color: $white;
+            }
+            &:focus {
+                outline: none;
+                border: $color1 solid 2px;
             }
             i {
                 font-size: 30px;

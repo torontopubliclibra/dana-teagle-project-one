@@ -58,11 +58,17 @@
                 // submit
                 &[type=submit] {
                     background-color: $color3;
-                    transition: 0.3s;
-                    &:focus, &:hover {
+                        &:hover {
                         background-color: $color1;
                         color: $color3;
                         box-shadow: 5px 5px $color3;
+                        transition: 0.3s;
+                    }
+                    &:focus {
+                        background-color: $color1;
+                        color: $color3;
+                        outline: none;
+                        border: 2px solid $color3;
                     }
                 }
             }
