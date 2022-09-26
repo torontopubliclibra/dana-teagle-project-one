@@ -307,10 +307,6 @@ nav #main-nav a:hover, nav #main-nav a:focus {
   color: #0C1423;
   background-color: #FFFFFF;
 }
-nav #main-nav a:focus {
-  outline: none;
-  border: #86E0F9 solid 2px;
-}
 nav .current {
   color: #86E0F9;
 }
@@ -1117,12 +1113,6 @@ ul li {
   box-shadow: 5px 5px #86E0F9;
   transition: 0.3s;
 }
-.button.btn1:focus {
-  outline: none;
-  background: #0F614E;
-  color: #86E0F9;
-  border: 2px solid #86E0F9;
-}
 .button.btn1:active {
   background: rgba(15, 97, 78, 0.5);
   transform: scale(0.9);
@@ -1136,12 +1126,6 @@ ul li {
   color: #0C1423;
   box-shadow: 5px 5px #0C1423;
   transition: 0.3s;
-}
-.button.btn2:focus {
-  outline: none;
-  background: #86E0F9;
-  color: #0C1423;
-  border: 2px solid #0C1423;
 }
 .button.btn2:active {
   background: rgba(134, 224, 249, 0.5);
@@ -1162,7 +1146,7 @@ ul li {
   right: 30px;
   transition: opacity linear 0.3s;
 }
-#scroll-to-top:hover, #scroll-to-top:focus {
+#scroll-to-top:hover {
   cursor: pointer;
   color: #FFFFFF;
 }

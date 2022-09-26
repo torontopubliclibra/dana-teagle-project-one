@@ -84,10 +84,6 @@ $font2: 'Lato', sans-serif;
                 color: $color3;
                 background-color: $white;
             }
-            &:focus {
-                outline: none;
-                border: $color1 solid 2px;
-            }
         }
         .current {
             color: $color1;
