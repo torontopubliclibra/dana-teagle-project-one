@@ -90,7 +90,7 @@
       comments.style.display = `block`;
 
       // change button to say `hide comments`
-      commentBtn.innerText = `Hide Comments`;
+      commentBtn.innerHTML = `Hide Comments <i class="fa fa-arrow-up" aria-hidden="true"></i>`;
 
     // if display = block
     } else {
@@ -99,6 +99,6 @@
       comments.style.display = ``;
 
       // change button to say `show comments`
-      commentBtn.innerText = `Show Comments`;
+      commentBtn.innerHTML = `Show Comments <i class="fa fa-arrow-down" aria-hidden="true"></i>`;
     }
   })

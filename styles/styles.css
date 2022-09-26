@@ -909,7 +909,6 @@ nav #main-nav li:last-of-type {
 .blog-main #show-comments {
   margin-bottom: 30px;
   width: 85%;
-  float: left;
 }
 .blog-main .blog-comments {
   border-top: 15px solid #86E0F9;
@@ -968,6 +967,7 @@ nav #main-nav li:last-of-type {
     margin: 5%;
   }
   .blog-main .blog-post .blog-comments {
+    border: none;
     text-align: left;
   }
   .blog-main .blog-post .blog-comments h3 {
@@ -1039,8 +1039,10 @@ nav #main-nav li:last-of-type {
   .blog-main .blog-post .blog-content h3 {
     text-align: left;
   }
+  .blog-main .blog-post #show-comments {
+    float: left;
+  }
   .blog-main .blog-post .blog-comments {
-    border: none;
     margin-right: 100px;
   }
 }

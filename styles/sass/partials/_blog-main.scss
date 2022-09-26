@@ -67,7 +67,6 @@
             #show-comments {
                 margin-bottom: 30px;
                 width: 85%;
-                float: left;
             }
 
             // blog comments
@@ -147,6 +146,7 @@
 
             // blog comments
             .blog-comments {
+                border: none;
                 text-align: left;
 
                 // h3 styles
@@ -229,6 +229,7 @@
             margin: 0px 0px -200px 0px;
             transform: translate(0px, -100px);
 
+
             // blog image
             .blog-img {
                 border: none;
@@ -249,9 +250,12 @@
                 }
             }
 
+            #show-comments {
+                float: left;
+            }
+
             // blog comments
             .blog-comments {
-                border: none;
                 margin-right: 100px;
             }
         }
