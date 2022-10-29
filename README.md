@@ -2,7 +2,7 @@
 
 ## About
 
-[Under the Sea](https://under-the-sea-drt.netlify.app/) is a PSD conversion project completed by [Dana Teagle](https://danateagle.com) in September 2022 at [Juno College](https://junocollege.com) as part of the Web Development Bootcamp (Cohort 44). This site was written using HTML, SCSS, and Javscript.
+[Under the Sea](https://under-the-sea-drt.netlify.app/) is a PSD conversion project completed by [Dana Teagle](https://danateagle.com) in September 2022 at [Juno College](https://junocollege.com) as part of the Web Development Bootcamp (Cohort 44). This site was written using HTML, SCSS, and Javascript.
 
 ## Design and Process
 
